@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
     <title>Base page</title>
-    <link rel="stylesheet"  href="css/styles.css">
-    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet"  href="css/styles.css"> 
+    <link rel="stylesheet" href="css/fonts.css">  
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <meta charset="utf-8">
     <meta name="language" content="ru">
 </html>
 <body>
     <header>
         <img src ="images/favicon.png" class ="banner">
+        <script defer ='defer' src ="main.js"></script>
         <h1>Intraduce</h1>
         <div>
             <nav class = "rightMenu">
@@ -22,10 +24,10 @@
             <div class = "mainMenu">   
                 <div>
                     <ul>
-                        <li><a href="#">Курсы валют</a></li>
-                        <li><a href="#">Кредиты</a></li>
-                        <li><a href="#">Вклады</a></li>
-                        <li><a href="#">Слитки</a></li>                    
+                        <li><a href="#popup_menu">Курсы валют</a></li>
+                        <li><a href="#popup_menu">Кредиты</a></li>
+                        <li><a href="#popup_menu">Вклады</a></li>
+                        <li><a href="#popup_menu">Слитки</a></li>                    
                     </ul>
                 </div>                     
                 <div class ="subMenu">                     
@@ -34,7 +36,7 @@
             </div>
         </div>
     </header>
-    <div class ='popup_menu main'>
+    <div class ='popup_menu'>
         <div class = 'popup1'>            
                 <ul>
                     <li><a href="#">Конвертер</a></li>
