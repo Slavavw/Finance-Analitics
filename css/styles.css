@@ -67,7 +67,7 @@ h1 {
 	text-transform: uppercase;
 	font-size: 2.5em; line-height: 2; 
 	color: rgb(243, 156, 26);
-	text-shadow: 2px -2px 3px #48d8f1;
+	text-shadow: 1px -1px 2px #48d8f1;
 	padding-left: 10px;
 }
 
@@ -125,50 +125,78 @@ opacity: 0;
 	animation: searchLoader 500ms ease-in forwards;		
 }
 /*----------------------------------*/
-.popup_menu {	
-	background: var(--popup_logo) left top/ 100% repeat-y;		
-	opacity: 1;	
+.popup_menu {		
+	background: url(../images/bg_main.jpg) left top/ 30% no-repeat transparent;
+	opacity: 1;		
 }
 .popup_menu div:nth-child(1n) { 
 	box-sizing: border-box;	
-	margin: 0 6% 0 6%;	
+	/*margin: 0 6% 0 6%;	*/
 } 
-.popup_menu ul { 
+.popup_menu ul { 	
 	list-style: none; 
 	font-family: LatoRegular, "Baskerville","LatoRefular", sans-serif;
-	font-weight: 400;	
-	font-size: 1.5em; 	
+	font: 400 1.4em Tahoma, Geneva, sans-serif;
+	/*background: url(../images/scroll_top.jpg) center top  no-repeat,	
+	url(../images/scroll_bottom.jpg) center bottom  no-repeat,
+	url(../images/scroll_middle.jpg) center center repeat-y;*/
+	/*padding: 40px 10px;	*/
 }
 
-.popup_menu li {line-height: 1.4em;}
+.popup_menu li {line-height: 1.4em;
+	background-image: url(../images/bullet.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 2px 0 2px 25px;	
+}
 
-.popup_menu a {
+.popup_menu a, .popup_menu a:visited,.popup_menu a:link {	
 	text-decoration: none; color: rgb(47, 48, 49); 
 	text-shadow: -1px -1px 1px rgba(36, 132, 235, 0.5); 
 }
-.popup1, .popup2 {
+
+.popup_menu a:hover {
+	color: rgb(41, 88, 243); font-weight: bold;
+	text-shadow: 1px -1px 1px #65747E;
+	
+	}
+.popup_menu a:active {color: #b2f511;}
+   
+
+
+.popup1, .popup2 {	
 	display: flex;
 	flex-flow: row nowrap; justify-content: space-around;
-	background: url(../images/bg_page1.png) left top / 100% 100% space;		
+	margin: 80px 0 10px 0;	
 }
 .popup1 ul:nth-child(1) li:nth-child(1) a, .popup1 ul:nth-last-child(1) li:nth-child(1) a, .popup2 li:nth-child(1) a
  {	color: red; }
 .popup_menu, .popup2, .popup1 {display:none; }
 
-
-
-/* всплывающее меню*/
-/*
-.popup1, .popup2 {
-	opacity: 0; 
-	transition-property: opacity;
-	transition-duration: 2s;
-	transition-timing-function: ease-in-out;
+/*--------------animation-------------------------*/
+@keyframes bannerAnimation {
+	from {
+		-webkit-transform: scale(.5) rotate(0);	
+		box-shadow: inset 0px 0px 100px 50px rgb(233, 236, 33),0px 0px 100px 50px rgb(91, 216, 238);
+		border-radius: 60px;		
+		left: 120%;
+	}
+	50% {
+		-webkit-transform: scale(.5) rotate(-720deg);		
+	}
+	to {
+		-webkit-transform: scale(1) rotate(0);
+		box-shadow: inset 0px 0px 100px 50px rgb(233, 236, 33),0px 0px 100px 50px rgb(91, 216, 238);
+		border-radius: 60px;
+		/*box-shadow: inset 0px 0px 100px 50px rgb(224, 30, 176) 0px 0px 100px 50x rgb(233, 236, 33);*/
+	}	
+	
 }
-*/
-
-/*
-.mainMenu li:nth-of-type(1) a:hover, .popup_menu, .popup1 {
-
-
-}*/
+.banner {
+	animation-name: bannerAnimation;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	/*animation-iteration-count: infinite;
+	animation-direction: alternate;*/
+}
