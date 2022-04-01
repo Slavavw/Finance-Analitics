@@ -50,12 +50,19 @@ body {
 	line-height: 1.2em;		
 }
 
-header, .popup_menu {	
+header {	
 	background: var(--logo) left top /100% 100% space;	
-	position: relative;	
+	/*position: fixed;*/
 	left: 0; right: 0;
 	padding: 5px 7px 0 7px;
 }
+
+.banner {
+	position: relative;
+	left: 0; 
+	/*z-index: 100;*/
+}
+
 header a {
 	text-align: center;
 	text-decoration: none;
@@ -125,6 +132,12 @@ opacity: 0;
 	animation: searchLoader 500ms ease-in forwards;		
 }
 /*----------------------------------*/
+.popup_menu{
+	position: relative;
+	left: 0; right: 0;
+	padding: 5px 7px 0 7px;
+
+}
 .popup_menu {		
 	background: url(../images/bg_main.jpg) left top/ 30% no-repeat transparent;
 	opacity: 1;		
@@ -194,7 +207,7 @@ opacity: 0;
 }
 .banner {
 	animation-name: bannerAnimation;
-	animation-duration: 3s;
+	animation-duration: 2s;
 	animation-timing-function: ease-in-out;
 	animation-fill-mode: forwards;
 	/*animation-iteration-count: infinite;
